@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JukkaServer20OWINAuth", "JukkaServer20OWINAuth\JukkaServer20OWINAuth.csproj", "{50D17686-EAE6-4826-8C44-9880FDA84A16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JukkaOWINTest", "JukkaOWINTest\JukkaOWINTest.csproj", "{990A5B94-C726-4665-8349-9D87DE192EFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JukkaServerLib", "JukkaServerLib\JukkaServerLib.csproj", "{BD6182DE-73E4-4039-9620-B585F6796C31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JukkaServerLib.NUnit", "JukkaServerLib.NUnit\JukkaServerLib.NUnit.csproj", "{3B5DF353-DB1A-44CB-93D4-FF45CDC93A61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JukkaServer", "JukkaServer\JukkaServer.csproj", "{C4942A5F-461A-4074-B0B7-B82C216C638D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashPassword", "HashPassword\HashPassword.csproj", "{C5D84EF4-E150-4549-A3B7-F1013D9FB95B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50D17686-EAE6-4826-8C44-9880FDA84A16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50D17686-EAE6-4826-8C44-9880FDA84A16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50D17686-EAE6-4826-8C44-9880FDA84A16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50D17686-EAE6-4826-8C44-9880FDA84A16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{990A5B94-C726-4665-8349-9D87DE192EFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{990A5B94-C726-4665-8349-9D87DE192EFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{990A5B94-C726-4665-8349-9D87DE192EFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{990A5B94-C726-4665-8349-9D87DE192EFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD6182DE-73E4-4039-9620-B585F6796C31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD6182DE-73E4-4039-9620-B585F6796C31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD6182DE-73E4-4039-9620-B585F6796C31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD6182DE-73E4-4039-9620-B585F6796C31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B5DF353-DB1A-44CB-93D4-FF45CDC93A61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B5DF353-DB1A-44CB-93D4-FF45CDC93A61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B5DF353-DB1A-44CB-93D4-FF45CDC93A61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B5DF353-DB1A-44CB-93D4-FF45CDC93A61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4942A5F-461A-4074-B0B7-B82C216C638D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4942A5F-461A-4074-B0B7-B82C216C638D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4942A5F-461A-4074-B0B7-B82C216C638D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4942A5F-461A-4074-B0B7-B82C216C638D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5D84EF4-E150-4549-A3B7-F1013D9FB95B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5D84EF4-E150-4549-A3B7-F1013D9FB95B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5D84EF4-E150-4549-A3B7-F1013D9FB95B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5D84EF4-E150-4549-A3B7-F1013D9FB95B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A6A04221-CC37-4567-A167-A6B50ABB6062}
+	EndGlobalSection
+EndGlobal
