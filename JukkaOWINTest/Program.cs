@@ -13,45 +13,53 @@ namespace JukkaOWINTest
     {
         static void Main(string[] args)
         {
-            string baseAddress = "http://localhost:51643";
+            string baseAddress = "http://localhost:50161";
             using (var client = new HttpClient())
             {
                 var form = new Dictionary<string, string>
-               {
+                {
                    {"grant_type", "password"},
                    {"username", "dstanford350"},
                    {"password", "123456"},
-               };
-                var tokenResponse = client.PostAsync(baseAddress + "/oauth/token",
-                                                     new FormUrlEncodedContent(form)).Result;
+                };
 
-                //var token = tokenResponse.Content.ReadAsStringAsync().Result;  
-                var token = tokenResponse.Content.ReadAsAsync<Token>(new[] { new JsonMediaTypeFormatter() }).Result;
-                if (string.IsNullOrEmpty(token.Error))
+                try
                 {
-                    Console.WriteLine("Token issued is: {0}", token.AccessToken);
-                }
-                else
-                {
-                    Console.WriteLine("Error : {0}", token.Error);
-                }
-
-                using (HttpClient httpClient1 = new HttpClient())
-                {
-                    httpClient1.BaseAddress = new Uri(baseAddress);
-                    httpClient1.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", token.AccessToken);
-                    HttpResponseMessage response = httpClient1.GetAsync("api/TestMethod").Result;
-                    if (response.IsSuccessStatusCode)
+                    var tokenResponse = client.PostAsync(baseAddress + "/oauth/token",
+                                                         new FormUrlEncodedContent(form)).Result;
+                    //var token = tokenResponse.Content.ReadAsStringAsync().Result;  
+                    var token = tokenResponse.Content.ReadAsAsync<Token>(new[] { new JsonMediaTypeFormatter() }).Result;
+                    if (string.IsNullOrEmpty(token.Error))
                     {
-                        System.Console.WriteLine("Success");
+                        Console.WriteLine("Token issued is: {0}\n", token.AccessToken);
                     }
-                    string message = response.Content.ReadAsStringAsync().Result;
-                    System.Console.WriteLine("URL responese : " + message);
+                    else
+                    {
+                        Console.WriteLine("Error : {0}", token.Error);
+                        return;
+                    }
+
+                    using (HttpClient httpClient1 = new HttpClient())
+                    {
+                        httpClient1.BaseAddress = new Uri(baseAddress);
+                        httpClient1.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", token.AccessToken);
+                        HttpResponseMessage response = httpClient1.GetAsync("api/TestMethod").Result;
+                        if (response.IsSuccessStatusCode)
+                        {
+                            System.Console.WriteLine("Successfully receive API response");
+                        }
+                        string message = response.Content.ReadAsStringAsync().Result;
+                        System.Console.WriteLine("API responese : " + message);
+                    }
+                }
+                catch (AggregateException ex) 
+                {
+                    Console.WriteLine($"{ex.Message}");
+                    return;
                 }
 
                 Console.Read();
             }
         }
     }
-
 }

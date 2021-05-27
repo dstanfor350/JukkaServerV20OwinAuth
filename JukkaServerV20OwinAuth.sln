@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JukkaServer20OWINAuth", "JukkaServer20OWINAuth\JukkaServer20OWINAuth.csproj", "{50D17686-EAE6-4826-8C44-9880FDA84A16}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JukkaOWINTest", "JukkaOWINTest\JukkaOWINTest.csproj", "{990A5B94-C726-4665-8349-9D87DE192EFB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{50D17686-EAE6-4826-8C44-9880FDA84A16} = {50D17686-EAE6-4826-8C44-9880FDA84A16}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JukkaServerLib", "JukkaServerLib\JukkaServerLib.csproj", "{BD6182DE-73E4-4039-9620-B585F6796C31}"
 EndProject
@@ -14,6 +17,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JukkaServer", "JukkaServer\JukkaServer.csproj", "{C4942A5F-461A-4074-B0B7-B82C216C638D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashPassword", "HashPassword\HashPassword.csproj", "{C5D84EF4-E150-4549-A3B7-F1013D9FB95B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8037B7A2-B391-4FE2-A667-1925A6F31D62}"
+	ProjectSection(SolutionItems) = preProject
+		ReadMe.txt = ReadMe.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
